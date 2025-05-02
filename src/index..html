@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- En-tête -->
+    <header>
+        <h1>Jean Dupont</h1>
+        <p>Développeur Web Full Stack</p>
+        <nav>
+            <a href="#accueil">Accueil</a>
+            <a href="#apropos">À Propos</a>
+            <a href="#projets">Projets</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Section À Propos -->
+    <section id="apropos" class="section">
+        <h2>À Propos de Moi</h2>
+        <div class="apropos">
+            <div class="photo-profil">
+                <img src="/api/placeholder/400/400" alt="Photo de profil">
+            </div>
+            <div class="bio">
+                <p>Bonjour ! Je suis Jean Dupont, développeur web passionné avec plus de 5 ans d'expérience dans la création d'applications web et mobiles.</p>
+                <p>Spécialisé en HTML, CSS, JavaScript et React, j'aime concevoir des interfaces intuitives et des expériences utilisateur fluides.</p>
+                <p>Mon parcours m'a amené à travailler sur divers projets allant des sites vitrines aux applications complexes intégrant l'intelligence artificielle.</p>
+                <p>En dehors du code, je suis un amateur de randonnée, photographie et gastronomie.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Projets -->
+    <section id="projets" class="section">
+        <h2>Mes Projets Récents</h2>
+        <div class="galerie-projets">
+            <div class="carte-projet">
+                <img src="/api/placeholder/400/300" alt="Projet 1">
+                <div class="carte-projet-contenu">
+                    <h3>Application Météo</h3>
+                    <p>Une application météo interactive utilisant l'API OpenWeatherMap avec géolocalisation.</p>
+                    <a href="#" class="bouton">Voir le projet</a>
+                </div>
+            </div>
+            <div class="carte-projet">
+                <img src="/api/placeholder/400/300" alt="Projet 2">
+                <div class="carte-projet-contenu">
+                    <h3>Plateforme E-learning</h3>
+                    <p>Une plateforme de cours en ligne avec système d'authentification et suivi de progression.</p>
+                    <a href="#" class="bouton">Voir le projet</a>
+                </div>
+            </div>
+            <div class="carte-projet">
+                <img src="/api/placeholder/400/300" alt="Projet 3">
+                <div class="carte-projet-contenu">
+                    <h3>Dashboard Analytique</h3>
+                    <p>Tableau de bord interactif pour visualiser et analyser des données commerciales.</p>
+                    <a href="#" class="bouton">Voir le projet</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Contact -->
+    <section id="contact" class="section">
+        <h2>Me Contacter</h2>
+        <div class="formulaire-contact">
+            <div class="groupe-formulaire">
+                <label for="nom">Nom</label>
+                <input type="text" id="nom" placeholder="Votre nom">
+            </div>
+            <div class="groupe-formulaire">
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="Votre email">
+            </div>
+            <div class="groupe-formulaire">
+                <label for="message">Message</label>
+                <textarea id="message" placeholder="Votre message"></textarea>
+            </div>
+            <button type="submit" id="boutonEnvoyer">Envoyer le message</button>
+        </div>
+    </section>
+
+    <!-- Pied de page -->
+    <footer>
+        <div class="icones-sociales">
+            <a href="#"><i class="fab fa-github" title="GitHub"></i></a>
+            <a href="#"><i class="fab fa-linkedin" title="LinkedIn"></i></a>
+            <a href="#"><i class="fab fa-twitter" title="Twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram" title="Instagram"></i></a>
+            <a href="#"><i class="fab fa-youtube" title="Youtube"></i></a>
+        </div>
+        <p class="copyright">© 2025 Jean Dupont. Tous droits réservés.</p>
+    </footer>
+
+    <!-- Chatbot -->
+    <div class="chatbot-conteneur">
+        <div class="chatbot-bouton" id="chatbot-bouton">
+            <i class="fas fa-comment"></i>
+        </div>
+        <div class="chatbot-fenetre" id="chatbot-fenetre">
+            <div class="chatbot-entete">
+                <h3>Assistant IA</h3>
+                <span class="chatbot-fermer" id="chatbot-fermer">&times;</span>
+            </div>
+            <div class="chatbot-messages" id="chatbot-messages">
+                <div class="message message-assistant">
+                    Bonjour ! Je suis votre assistant virtuel. Comment puis-je vous aider aujourd'hui ?
+                </div>
+            </div>
+            <div class="chatbot-saisie">
+                <input type="text" id="chatbot-entree" placeholder="Écrivez votre message...">
+                <button id="chatbot-envoyer">Envoyer</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
