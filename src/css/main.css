@@ -1,0 +1,358 @@
+ /* Variables CSS */
+ :root {
+    --couleur-primaire: #4a6fa5;
+    --couleur-secondaire: #f8f9fa;
+    --couleur-accent: #e63946;
+    --couleur-texte: #333;
+    --couleur-fond: #fff;
+    --ombre: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+    --espacement: 1rem;
+}
+
+/* Styles de base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--couleur-texte);
+    background-color: var(--couleur-fond);
+}
+
+/* En-tête */
+header {
+    background-color: var(--couleur-primaire);
+    color: white;
+    padding: 2rem 0;
+    text-align: center;
+    position: relative;
+    box-shadow: var(--ombre);
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    padding: 1rem 0;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 1rem;
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+nav a:hover {
+    color: var(--couleur-accent);
+    transform: translateY(-2px);
+}
+
+/* Sections principales */
+.section {
+    max-width: 1200px;
+    margin: 4rem auto;
+    padding: 0 2rem;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--couleur-primaire);
+    position: relative;
+}
+
+h2::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background-color: var(--couleur-accent);
+    margin: 0.5rem auto;
+}
+
+/* À propos */
+.apropos {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    margin-bottom: 4rem;
+}
+
+.photo-profil {
+    flex: 1;
+    text-align: center;
+}
+
+.photo-profil img {
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: var(--ombre);
+    border: 5px solid white;
+}
+
+.bio {
+    flex: 2;
+    line-height: 1.8;
+}
+
+/* Projets */
+.galerie-projets {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.carte-projet {
+    background-color: var(--couleur-secondaire);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: var(--ombre);
+    transition: var(--transition);
+}
+
+.carte-projet:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 16px rgba(0, 0, 0, 0.15);
+}
+
+.carte-projet img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.carte-projet-contenu {
+    padding: 1.5rem;
+}
+
+.carte-projet-contenu h3 {
+    margin-bottom: 0.5rem;
+    color: var(--couleur-primaire);
+}
+
+.carte-projet-contenu p {
+    margin-bottom: 1rem;
+    color: #666;
+}
+
+.bouton {
+    display: inline-block;
+    background-color: var(--couleur-primaire);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.bouton:hover {
+    background-color: var(--couleur-accent);
+}
+
+/* Contact */
+.formulaire-contact {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: var(--couleur-secondaire);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: var(--ombre);
+}
+
+.groupe-formulaire {
+    margin-bottom: 1.5rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-family: inherit;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+button {
+    background-color: var(--couleur-primaire);
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+button:hover {
+    background-color: var(--couleur-accent);
+}
+
+/* Pied de page */
+footer {
+    background-color: var(--couleur-primaire);
+    color: white;
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 4rem;
+}
+
+.icones-sociales {
+    margin: 1rem 0;
+}
+
+.icones-sociales a {
+    color: white;
+    font-size: 1.5rem;
+    margin: 0 0.5rem;
+    transition: var(--transition);
+}
+
+.icones-sociales a:hover {
+    color: var(--couleur-accent);
+}
+
+.copyright {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+/* Chatbot */
+.chatbot-conteneur {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.chatbot-bouton {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: var(--couleur-primaire);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: var(--ombre);
+    transition: var(--transition);
+}
+
+.chatbot-bouton:hover {
+    background-color: var(--couleur-accent);
+    transform: scale(1.05);
+}
+
+.chatbot-fenetre {
+    position: absolute;
+    bottom: 80px;
+    right: 0;
+    width: 350px;
+    height: 450px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+    display: none;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.chatbot-entete {
+    background-color: var(--couleur-primaire);
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.chatbot-fermer {
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+
+.chatbot-messages {
+    flex: 1;
+    padding: 15px;
+    overflow-y: auto;
+}
+
+.message {
+    margin-bottom: 10px;
+    max-width: 80%;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.message-utilisateur {
+    background-color: var(--couleur-secondaire);
+    align-self: flex-end;
+    margin-left: auto;
+}
+
+.message-assistant {
+    background-color: var(--couleur-primaire);
+    color: white;
+}
+
+.chatbot-saisie {
+    display: flex;
+    padding: 10px;
+    border-top: 1px solid #ddd;
+}
+
+.chatbot-saisie input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    margin-right: 10px;
+}
+
+.chatbot-saisie button {
+    background-color: var(--couleur-primaire);
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+.chatbot-messages {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .apropos {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .chatbot-fenetre {
+        width: 300px;
+        right: 0;
+    }
+}
